@@ -46,10 +46,18 @@ class FerryController extends Controller
         $ferry -> longueur=$ferryRequest->input('longueur');
         $ferry -> largeur=$ferryRequest->input('largeur');
         $ferry -> vitesse=$ferryRequest->input('vitesse');
-
-
-      
+    
         $ferry->save();
+        
+        $equipements = DB::table("equipements")->get();
+        $equipement_id = $ferryRequest->get('equipement');
+        foreach ($equipements as $equipement) {
+            foreach ($equipement_id as $id) {
+                if($equipement->id==$id) {
+                    $ferry->equipements()->attach($equipement->id);
+                }
+            }
+        }
         return redirect()->route('ferry.index')->with('info',"le ferry a bien été crée");
     }
 
@@ -83,6 +91,7 @@ class FerryController extends Controller
      */
     public function destroy(Ferry $ferry)
     {
+        unlink(public_path('photos/'.$ferry->photo.''));
         $ferry->delete();
         return back()->with('info','le ferry a été supprimé');
     }

@@ -38,7 +38,7 @@
         <div class="card p-4 bg-light mb-3 rounded-5" style="background-color: #d9d9d9;">
             <div class="row g-0">
                 <div class="col-md-6">
-                    <img src="../photo/<?php echo $ferry->photo?>" alt="ferry.jpg" style="width:450px;height:auto">
+                    <img src="../photos/<?php echo $ferry->photo?>" alt="ferry.jpg" style="width:450px;height:auto">
                 </div>
                 <div class="col-md-3">
                     <div class="font-semibold" style="color: #255483;font-size:20px">

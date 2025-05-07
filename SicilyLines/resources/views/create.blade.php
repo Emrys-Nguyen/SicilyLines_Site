@@ -14,7 +14,7 @@
 <div class="relative justify-center rounded-5 bg-light rounded-top-0 items-center" style="background:#255483;">
     <div class="top-0">
         <div class="absolute top-0 left-0 p-6 z-10">
-            <img src="{{url('/photo/logo.png')}}" alt="logo.png" width="75px">
+            <img src="{{url('/photos/logo.png')}}" alt="logo.png" width="75px">
         </div>
         <div class="text-center font-bold p-6" style="font-size: 2rem; color:#255483">
             Sicily Lines
@@ -96,7 +96,7 @@
                     @enderror
                 </div>
                 <br>
-                {{-- <div class="col-md-6">
+                <div class="col-md-6">
                     <label for='equipements' class="form-label" style="color:#255483; font-weight: 700;">Equipements :</label>
                     <div class="dropdown" id="equipements">
                         <div class="row g-0">
@@ -110,12 +110,12 @@
                             </div>
                             <ul class="dropdown-menu">
                                 @foreach($equipements as $equipement)
-                                <input type="checkbox" name="equipement{{$equipement->id}}" <?php if (isset($equipement) && $equipement->libelle==) echo "checked";?> value="">{{$equipement->libelle}}
+                                <li><input type="checkbox" name="equipement[]" value="{{$equipement->id}}">{{$equipement->libelle}}</input></li>
                                 @endforeach
                             </ul>
                         </div>
                     </div>
-                </div> --}}
+                </div>
 
                 <div class="control d-flex justify-content-end">
                     <button class="btn btn-primary me-2 rounded-5" style="background-color: #255483; color:#d9d9d9;  font-size: 25px; font-weight: 500;">Envoyer</button>

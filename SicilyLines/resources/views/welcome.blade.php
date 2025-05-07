@@ -4,7 +4,7 @@
   <div class="relative justify-center rounded-5 bg-light rounded-top-0 items-center" style="background:#255483;">
     <div class="top-0">
       <div class="absolute top-0 left-0 p-6 z-10">
-        <img src="{{url('/photo/logo.png')}}" alt="logo.png" width="75px">
+        <img src="{{url('/photos/logo.png')}}" alt="logo.png" width="75px">
       </div>
       <div class="text-center font-bold p-6" style="font-size: 2rem; color:#255483">
         Sicily Lines
@@ -31,7 +31,7 @@
       </div>
     </div>
   </div>
-  <div id="carouselExampleFade" class="carousel slide carousel-fade" style="margin-top: 10rem">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" style="margin-top: 3rem">
     <div class="carousel-inner rounded-5" style="width: 800px; height:450px; top:0%; left: 50%; transform: translate(-50%);">
       <div class="carousel-item active">
         <img src="{{url('/photo/sicile_1.png')}}" class="d-block" alt="sicile_1" width="100%" height="100%">
@@ -57,7 +57,7 @@
   </div>
   @if (Route::has('login'))
     @auth
-      <div class="d-flex justify-content-center align-items-end" style="margin-top: 5rem">
+      <div class="d-flex justify-content-center align-items-end" style="margin-top: 1rem">
         <a role="button" href="{{url('/ferry')}}" class="btn rounded-pill font-semibold  dark:hover:text-white focus:outline focus:outline-2 focus:outline-white" style="background:white;color:#255483;font-size:2rem">Voir les ferrys</a>
       </div>
     @endauth
