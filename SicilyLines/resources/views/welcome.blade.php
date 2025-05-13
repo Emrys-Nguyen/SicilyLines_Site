@@ -4,7 +4,7 @@
   <div class="relative justify-center rounded-5 bg-light rounded-top-0 items-center" style="background:#255483;">
     <div class="top-0">
       <div class="absolute top-0 left-0 p-6 z-10">
-        <img src="{{url('/photos/logo.png')}}" alt="logo.png" width="75px">
+        <img src="{{url('/photo/logo.png')}}" alt="logo.png" width="75px">
       </div>
       <div class="text-center font-bold p-6" style="font-size: 2rem; color:#255483">
         Sicily Lines
